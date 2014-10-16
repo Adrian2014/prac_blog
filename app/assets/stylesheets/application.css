@@ -45,6 +45,11 @@ input[type="text"] {
   float: left;
 }
 
+.row_article .button{
+  width: 100%;  
+
+}
+
 .button, submit {
   background: #333;
 }

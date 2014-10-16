@@ -19,6 +19,8 @@ html {
 body {
   margin: 0;
   background-size: cover;
+  background-image: url('background.jpg');
+  color: #D5E8FF;
 }
 
 
@@ -249,6 +251,12 @@ samp {
  * styling of `select`, unless a `border` property is set.
  */
 
+button{
+  width: 100%; 
+  background-size: 100%; 
+
+}
+
 /**
  * 1. Correct color not being inherited.
  *    Known issue: affects color of disabled elements.
@@ -272,7 +280,9 @@ textarea {
 
 button {
   overflow: visible;
+
 }
+
 
 /**
  * Address inconsistent `text-transform` inheritance for `button` and `select`.
