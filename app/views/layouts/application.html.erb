@@ -18,20 +18,21 @@
 </head>
 
 <body>
+ 
+<!-- top nav -->
   <div class="sticky">
     <nav class="top-bar" data-topbar>
        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
       <ul class="title-area">
         <li class="name">
-          <h1><a href="/"></a></h1>
+          <h1><%= link_to 'New article', new_article_path%></h1>
         </li>
         <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
       </ul>
       <section class="top-bar-section">
         <ul class="right">
           <li><%= link_to "Home", controller: "articles", action: "index" %></li>
-
-
+<!--    top nav sign in -->
           <% if current_user != nil %>
             <li><%= link_to "Welcome " + current_user.username.capitalize, controller: "users", action: "show" %></li>
             <li><%= link_to "Log out", controller: "users", action: "logout" %></li>
