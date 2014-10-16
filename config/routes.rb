@@ -1,11 +1,22 @@
 Rails.application.routes.draw do
 
- 
+  get 'users/new' => 'users#new'
+  get 'users/show' => 'users#show'
+  post 'users/create' => 'users#create'
+  get 'users/login' => 'users#login'
+  post 'users/login' => 'users#login_post'
+  get 'users/show' => 'users#show'
+  get 'users/logout' => 'users#logout'
+  get 'users/welcome' => 'users#welcome'
+
+
   resources :articles do 
     resources :comments
   end
  
-  root 'welcome#index'
+  root 'articles#index'
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

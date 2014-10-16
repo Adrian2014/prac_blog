@@ -13,3 +13,64 @@
  *= require_tree .
  *= require_self
  */
+
+ div.centeredcontent {
+  width: 50%;
+  margin: 0 auto;
+ }
+
+ section.container {
+  margin: 40px;
+  padding: 30px 40px;
+  border: 1px solid #000;
+  background-color: #fff;
+ }
+
+nav.top-bar ul li a {
+  text-decoration: none;
+}
+
+div.form_container {
+  max-width: 800px;
+  width: auto;
+  margin-left: 15%;
+  border: 1px solid gray;
+}
+
+div.row {
+  margin-left: 0;
+}
+
+input[type="text"] {
+  float: left;
+}
+
+.button, submit {
+  background: #333;
+}
+
+.button:hover, submit:hover{
+  background: #272727;
+}
+
+.button:visited {
+  color: #fff;
+}
+
+.columns {
+  margin-top: 10px;
+}
+
+textarea {
+  height: 320px;
+}
+
+.post_image {
+  float: right;
+  margin: 10px;
+}
+
+@media screen and (max-width: 980px) {
+  /*this for anything  that needs to resize when the viewer is resized*/
+
+}

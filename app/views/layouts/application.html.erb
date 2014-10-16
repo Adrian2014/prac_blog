@@ -1,14 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PracBlog</title>
+  <title>Practice Blog</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
+
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
   <%= csrf_meta_tags %>
+  <%= yield(:head) %>
+
+
+
 </head>
+
 <body>
+ <center><h6>Musings</h6> </center> 
 
-<%= yield %>
 
+  <div class="sticky">
+    <nav class="top-bar" data-topbar>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="/">Home</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+      </ul>
+      <section class="top-bar-section">
+        <ul class="right">
+          <li><%= link_to "About", controller: "articles", action: "index" %></li>
+
+
+          <% if current_user != nil %>
+            <li><%= link_to "Welcome " + current_user.username.capitalize, controller: "users", action: "show" %></li>
+            <li><%= link_to "Log out", controller: "users", action: "logout" %></li>
+          <% else %>
+            <li><%= link_to 'Sign In', controller: "users", action: "login" %></li>
+            <li><%= link_to "Register", controller: "users", action: "new" %></li>
+          <% end %>
+        </ul>
+      </section>
+    </nav>
+  </div><br><br>
+
+
+
+  
+
+
+
+    <%= yield %>
+
+  
+
+
+  <script src="/assets/foundation.js"></script>
+  <script src="/assets/foundation.topbar.js"></script>
+  <script>$(document).foundation();</script>
 </body>
 </html>

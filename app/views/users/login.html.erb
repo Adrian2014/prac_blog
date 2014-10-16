@@ -1,0 +1,27 @@
+  <section class="container">
+    <h1>Sign in!</h1>
+    <%= form_for @user, url: {action: "login_post"}, html: {id: "login_form"} do |f| %>
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li style='color:red'><%= msg %></li>
+      <% end %>
+      </ul>
+      <div class="row">
+        <div class="small-4 columns">
+          <%= f.text_field :email, id: 'email', placeholder: "Email", class: 'input-text' %>
+          <label class="label-helper" for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-4 columns">
+          <%= f.password_field :password, id: 'password', placeholder: "Password", class: 'input-text' %>
+          <label class="label-helper" for="password">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-4 columns">
+          <%= f.submit "Sign In!", class: "button tiny [radius round]" %>
+        </div>
+      </div>
+    <% end %>
+  </section>
