@@ -16,20 +16,52 @@
 
 
 
-a:link { 
+
+
+
+.body{
+  opacity: 1.5;
+}
+
+
+#footer {position: relative;
+  margin-top: -150px; /* negative value of footer height */
+  height: 150px;
+  clear:both;
+}
+
+#footer .button{
+  width: 100%;  
+  background-size: 100%;
+  text-align: center;
+  color: #D5E8FF;
   
+}
+
+.article {
+  font-size: 1em;
+  line-height: 100%;
+}
+
+.article h2{
+  padding-left: 2em;
+}
+
+
+a:link { 
+  color: #D5E8FF;
   text-decoration: none;
 }
 a:visited { 
-  color: #FFFFFF;
+  color: #D5E8FF;
   text-decoration: none;
 }
 a:hover { 
-  color: #CCCCCC;
+  color: #D5E8FF;
   text-decoration: none;
 }
 a:active { 
-  color: #333333;
+  color: #D5E8FF;
   text-decoration: none;
 }
 
@@ -42,7 +74,7 @@ a:active {
   margin: 40px;
   padding: 30px 40px;
   border: 1px solid #000;
-  background-color: #fff;
+  background-color: #D5E8FF;
  }
 
 nav.top-bar ul li a {
@@ -65,6 +97,61 @@ input[type="text"] {
 }
 
 
+blockquote {
+  margin: 0 0 1.25rem;
+  padding: 0.5625rem 1.25rem 0 1.1875rem;
+  border-left: 1px solid #dddddd; }
+  blockquote cite {
+    display: block;
+    font-size: 0.8125rem;
+    color: #555555; }
+    blockquote cite:before {
+      content: "\2014 \0020"; }
+    blockquote cite a,
+    blockquote cite a:visited {
+      color: #555555; }
+
+blockquote,
+blockquote p {
+  line-height: 1.6;
+  color: #6f6f6f; }
+
+
+.button, submit {
+  background: #333;
+  color: #D5E8FF;
+}
+
+.button:hover, submit:hover{
+  background: #272727;
+  color: #D5E8FF;
+}
+
+.button:visited {
+  color: #D5E8FF;
+}
+
+.columns {
+  margin-top: .5em;
+}
+
+
+.comment div p {
+  border-bottom: 1px solid #dddddd;
+  text-align: right; 
+}
+
+
+
+.post_image {
+  float: right;
+  margin: 10px;
+}
+
+
+#right {
+  text-align: right;
+}
 
 .row_article div div{
   border-right-style: solid;
@@ -73,7 +160,7 @@ input[type="text"] {
 
 
 .row_article{
-  border-top-style: solid;
+  border-bottom-style: solid;
   border-color: #D5E8FF;
 }
 
@@ -85,32 +172,63 @@ input[type="text"] {
   
 }
 
-.button, submit {
-  background: #333;
-}
+.panel {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d8d8d8;
+  margin-bottom: 1.25rem;
+  padding: .75rem;
+  background: #f2f2f2;
+ /* background: transparent\9;*/  
+  background:rgba(0,0,0,0.5);  
+  color: #D5E8FF; }
+  .panel > :first-child {
+    margin-top: 0; }
+  .panel > :last-child {
+    margin-bottom: 0; }
+  .panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6, .panel p, .panel li, .panel dl {
+    color: #D5E8FF; }
+  .panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6 {
+    line-height: 1;
+    margin-bottom: 0.625rem; }
+    .panel h1.subheader, .panel h2.subheader, .panel h3.subheader, .panel h4.subheader, .panel h5.subheader, .panel h6.subheader {
+      line-height: 1.4; }
+  .panel.callout {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #b6edff;
+    margin-bottom: 1.25rem;
+    padding: 1.25rem;
+    background: #ecfaff;
+    color: #333333; }
+    .panel.callout > :first-child {
+      margin-top: 0; }
+    .panel.callout > :last-child {
+      margin-bottom: 0; }
+    .panel.callout h1, .panel.callout h2, .panel.callout h3, .panel.callout h4, .panel.callout h5, .panel.callout h6, .panel.callout p, .panel.callout li, .panel.callout dl {
+      color: #333333; }
+    .panel.callout h1, .panel.callout h2, .panel.callout h3, .panel.callout h4, .panel.callout h5, .panel.callout h6 {
+      line-height: 1;
+      margin-bottom: 0.625rem; }
+      .panel.callout h1.subheader, .panel.callout h2.subheader, .panel.callout h3.subheader, .panel.callout h4.subheader, .panel.callout h5.subheader, .panel.callout h6.subheader {
+        line-height: 1.4; }
+    .panel.callout a:not(.button) {
+      color: #008cba; }
+  .panel.radius {
+    border-radius: 3px; }
 
-.button:hover, submit:hover{
-  background: #272727;
-}
 
-.button:visited {
-  color: #fff;
-}
-
-.columns {
-  margin-top: 10px;
-}
 
 textarea {
-  height: 320px;
-}
-
-.post_image {
-  float: right;
-  margin: 10px;
+  height: 10em;
+  color: black;
 }
 
 @media screen and (max-width: 980px) {
   /*this for anything  that needs to resize when the viewer is resized*/
 
 }
+
+
+
+

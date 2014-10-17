@@ -1,22 +1,41 @@
-<h1>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</h1>
- 
-<h2>
-  <strong>Text:</strong>
-  <%= @article.text %>
-</h2>
 
 
-<h3>Comments</h3>
-<%= render @article.comments %>
+<!-- articles-->
+
+<div class="article">
+	<div class="row centered">
+		<div class="small-10 small-offset-1 panel columns">
+						
+						<div class="panel">
+						  <h1><%= @article.title %></h1>
+						  <p>&nbsp &nbsp &nbsp &nbsp<%= @article.text %></p>
+						</div>  
+
+          <p id="right">	<%= link_to 'Edit', edit_article_path(@article), class: "button small [radius round]"%> </p>
+		</div>
+	</div>
+</div>
 
 
-<h3>Add a comment:</h3>
-<%= render "comments/form" %>
+
+
+<!-- comments -->
+
+
+<h3> &nbsp <u>Comments</u></h3>
+	<%= render @article.comments %>
+
+
+<div class="new_comment">
+	<div class="row">
+		<div class="small-6 small-offset-.3 columns">
+
+			<h3>Add a comment:</h3>
+			<%= render "comments/form" %>
+		</div>
+	</div>
+</div>	
 
 
 
-
-<%= link_to 'Show All', articles_path, class: "button small [radius round]" %> | <%= link_to 'Edit', edit_article_path(@article), class: "button small [radius round]" %>
+<%= link_to 'Show All', articles_path, class: "button small [radius round]" %> 

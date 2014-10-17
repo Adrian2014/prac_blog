@@ -43,18 +43,26 @@
         </ul>
       </section>
     </nav>
-  </div><br><br>
+  </div>
+  <br>
+  <br>
 
+<div class="body">
    <center><h6>Musings</h6> </center> 
+
+    <%= yield %>
+
+  <div class="row">
+     <div class="small-3 small-offset-8 columns">
+      <%= link_to 'New article', new_article_path, class: "button big [radius round]" %>
+    </div>
+  </div>
+</div>
+
 
 
 
   
-
-
-
-    <%= yield %>
-
   
 
 
