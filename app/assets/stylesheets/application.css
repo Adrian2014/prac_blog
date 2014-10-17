@@ -47,21 +47,26 @@
   padding-left: 2em;
 }
 
-.border{
-  margin: 10em, 2em, 2em, 10em;
+
+
+
+#border{
   border-style: solid;
-  border-color: black;
+  border-color: white;
 }
+
 
 #about dd{
   padding-left: 0em;
   margin-left: 0em;
 }
 
-#about #move_right{
-  padding-left: 4em;
-}
 
+
+
+#about #border{
+  background:rgba(0,0,0,0.5)
+}
 
 a:link { 
   color: #D5E8FF;
