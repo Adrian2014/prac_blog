@@ -63,7 +63,6 @@
 
 
 
-
 #about #border{
   background:rgba(0,0,0,0.5)
 }
@@ -173,16 +172,13 @@ blockquote p {
   text-align: right;
 }
 
-.row_article div div{
-  border-right-style: solid;
-  border-color: #D5E8FF;
-}
-
-
-.row_article{
+#edit{
+  
+  border-right-style:solid;
   border-bottom-style: solid;
   border-color: #D5E8FF;
 }
+
 
 .row_article .button{
   width: 100%;  

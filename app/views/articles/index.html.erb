@@ -45,37 +45,36 @@
 
 
 <section id="articles">
-      <div class="medium-11 columns small-centered">
+      <div class="medium-11 columns">
 
-        <div class="row">
-          <div class="small-12 medium-6 columns">
-            <h1><u>Hypotheses</u></h1> 
-          </div>
-        </div>
+
 
 
 
 <% @articles.each do |article| %>
 
         <div class="row_article">
-          <div class="row" data-equalizer>
+          <div class="row" >
+            <div class="small-12 medium-8 medium-centered columns" >  
+                          <div class="row" >
+                            <h1><%=article.title%></h1>
+                            <div class="small-12 columns" >
+                              <%= link_to "Read Article", article_path(article), class: "button small [radius round]" %>           
+                            </div>
+                          </div> 
+                          <div class="row" >  
+                            <div id="edit" class="small-6 columns" >
+                              <%= link_to 'Edit', edit_article_path(article), class: "button small [radius round]" %>
+                            </div> 
 
-            <div id="article" class="small-12 medium-6 columns" data-equalizer-watch>
-              <%= link_to article.title, article_path(article), class: "button small [radius round]" %>           
-            </div>
-
-            
-            <div id="edit" class="small-5 medium-3 columns" data-equalizer-watch>
-              <%= link_to 'Edit', edit_article_path(article), class: "button small [radius round]" %>
-            </div> 
-
-            <div id="edit" class="small-5 medium-3 columns end" data-equalizer-watch>
-              <%= link_to 'Destroy', article_path(article),
-                      method: :delete, data: { confirm: 'Are you sure?' }, class: "button small [radius round]" %>
-            </div>
-
+                            <div id="edit" class="small-6 columns" >
+                              <%= link_to 'Destroy', article_path(article),
+                                      method: :delete, data: { confirm: 'Are you sure?' }, class: "button small [radius round]" %>
+                            </div>
+                          </div>
+            </div>                  
           </div> <!-- end row -->
-        </div>
+        </div> <!-- row_article -->
       </br>
     
 <% end %>
