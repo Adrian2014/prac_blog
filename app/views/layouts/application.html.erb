@@ -23,16 +23,39 @@
   <div class="sticky">
     <nav class="top-bar" data-topbar>
        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+
       <ul class="title-area">
         <li class="name">
-          <h1><%= link_to 'New article', new_article_path%></h1>
+          <h1>Cumulative Intelligence</h1>
         </li>
+
         <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
       </ul>
+
       <section class="top-bar-section">
+        <ul class="left">
+    
+        </ul> 
+       
         <ul class="right">
-          <li><%= link_to "Home", controller: "articles", action: "index" %></li>
-<!--    top nav sign in -->
+          <% if @aricle !=nil %> 
+            <li class="has-dropdown">
+            <a href="#">Right Button Dropdown</a>
+            <ul class="dropdown">
+              <li><a href="#">First link in dropdown</a></li>
+              <li class="active"><a href="#">Active link in dropdown</a></li>
+            </ul>
+          </li>
+    <% else %>      
+            <li class="has-dropdown">
+              <a href="#about">About</a>
+              <ul class="dropdown">
+                <li><a href="#articles">Articles</a></li>
+                <li class="active"><a href="#contact">Contact</a></li>
+              </ul>
+            </li>
+    <% end %>
+
           <% if current_user != nil %>
             <li><%= link_to "Welcome " + current_user.username.capitalize, controller: "users", action: "show" %></li>
             <li><%= link_to "Log out", controller: "users", action: "logout" %></li>
@@ -44,31 +67,42 @@
       </section>
     </nav>
   </div>
-  <br>
-  <br>
 
 <div class="body">
    
 
     <%= yield %>
 
-  <div class="row">
-     <div class="small-3 small-offset-9 columns">
-      <%= link_to 'New article', new_article_path, class: "button big [radius round]" %>
-    </div>
-  </div>
+  
 </div>
 
 
+<footer class="row">
+    <div class="large-12 columns">
+      <hr/>
+      <div class="row">
+        <div class="large-6 columns">
+          <p>© Cumulative Intelligence</p>
+        </div>
+      </div>
+    </div> 
+  </footer>
+
+
 
 
   
   
-
 
   <script src="/assets/foundation.js"></script>
   <script src="/assets/foundation.topbar.js"></script>
   <script src="/assets/foundation.tabs.js"></script>
+  <script src="/assets/scripts.js"></script>
+  <script src="/assets/slick.min.js"></script>
+
   <script>$(document).foundation();</script>
+ 
+
+ 
 </body>
 </html>

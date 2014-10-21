@@ -1,82 +1,83 @@
 
+<div id="about" class="row">
+      <div class="small-12 columns">
+        
+          <div class="row" >
+            <div class="small-12 large-8 large-centered columns" >
+        
+          <section id="about">
 
-<section id="about">  
-    <div id="border" class="row" >
-      <div class="small-11 small-centered columns">
-       
-         
-          <dl id="border" class="tabs vertical" data-tab>
-            <dd class="active"><a href="#panel1">Cumulative Intelligence</a></dd>
-            <dd><a href="#panel3">Intelligence</a></dd>
-            <dd><a href="#panel2">Cumulative</a></dd> 
-          </dl>
-          <div id="border" class="tabs-content">
-            <div class="content active" id="panel1">
-              <p>Definition -> using personal or interpersonal expiriences, knowledge or memories to understand and overcome challenges</p>
-            </div>
-            <div class="content" id="panel2">
-              <p>
-                <u>cu·mu·la·tive</u> (adjective) -> increasing or increased in quantity, degree, or force by successive additions.
-              </p>
-            </div>
-            <div class="content" id="panel3">
-              <p>
-                <u>in·tel·li·gence</u> (noun) -> the ability to learn or understand things or to deal with new or difficult situations
-              </p>
-            </div>
-          </div><!-- tabs-content --> 
-      
-    </div> <!-- small-11 centered columns -->
-  </div> <!-- row -->
-</section>
+            <h2>Cumulative Intelligence</h2>
+            <script type="text/javascript">$('.one-time').slick({dots: true,infinite: true,speed: 300,slidesToShow: 1,adaptiveHeight: true});</script>
+                  <div class="slider one-time">
+                    <div><h3>Definition</h3><p> using personal or interpersonal expiriences, knowledge or memories tvercome challenges</p></div>
+                    <div><h3>Cumulative</h3><p>cu·mu·la·tive (adjective) -> increasing or increased in quantity, degree, or force by successive additions.</p></div>
+                    <div><h3>Intelligence</h3><p>in·tel·li·gence (noun) -> the ability to learn or understand things or to deal with new or difficult situations</p></div>
+                    <div><h3>Renesiance</h3><p>Woo!</p></div>
+                  </div>
+
+          </section>
+            
+        </div>
+     
+    </div>
+  </div>
+</div> <!-- end row -->
+</br>
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
+<div id="articles">
 <section id="articles">
       <div class="medium-11 columns">
-
-
-
-
-
 <% @articles.each do |article| %>
-
         <div class="row_article">
           <div class="row" >
             <div class="small-12 medium-8 medium-centered columns" >  
-                          <div class="row" >
-                            <h1><%=article.title%></h1>
-                            <div class="small-12 columns" >
-                              <%= link_to "Read Article", article_path(article), class: "button small [radius round]" %>           
-                            </div>
-                          </div> 
-                          <div class="row" >  
-                            <div id="edit" class="small-6 columns" >
-                              <%= link_to 'Edit', edit_article_path(article), class: "button small [radius round]" %>
-                            </div> 
+              <div class="row" >
+                <h1><%=article.title%></h1>
+                <div class="small-12 columns" >
+                 <%= link_to "Read Article", article_path(article), class: "button small [radius round]" %>          
+               </div>
+               </div> 
+                 <div class="row" >  
+                 <div id="edit" class="small-6 columns" >
+                  <%= link_to 'Edit', edit_article_path(article), class: "button small [radius round]" %>
+                </div> 
 
-                            <div id="edit" class="small-6 columns" >
-                              <%= link_to 'Destroy', article_path(article),
+                 <div id="edit" class="small-6 columns" >
+                   <%= link_to 'Destroy', article_path(article),
                                       method: :delete, data: { confirm: 'Are you sure?' }, class: "button small [radius round]" %>
-                            </div>
-                          </div>
+                 </div>
+              </div>
             </div>                  
           </div> <!-- end row -->
         </div> <!-- row_article -->
-      </br>
-    
+      </br>  
 <% end %>
+      </br> 
+        
+
       </div>
+     
   </section>
+   <div class="row">
+             <div class="small-4 small-offset-8 columns">
+             
+                <%= link_to 'New Article', new_article_path, class: "button big [radius round]" %>     
+         
+            </div>
+        </div>
+</div>
+
+
+
+
+
+
+
+
+
+
