@@ -218,7 +218,7 @@ blockquote p {
 
 
 .comment div p {
-  border-bottom: 1px solid #dddddd;
+  border-top: 1px solid #dddddd;
   text-align: right; 
 }
 
@@ -397,9 +397,19 @@ dl dd {
 
 }*/
 
+#show_article{
+  padding-bottom: 2em;
+
+}
+
 #show_comment{
   padding-top: 2em;
   padding-bottom: 2em;
+}
+
+#show_comment #show_comment{
+  padding-top: 0em;
+  padding-bottom: 0em;
 }
 
 .sub-nav {
