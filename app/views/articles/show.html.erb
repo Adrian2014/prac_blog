@@ -1,5 +1,5 @@
 
-<div id="show" data-magellan-expedition="fixed">
+<div id="show">
 
 	<!-- <div class="sticky">
     <nav class="top-bar" data-topbar>
@@ -34,10 +34,18 @@
 		</div>
 	</div>
 
-	<dl class="sub-nav">
-	  <dd data-magellan-arrival="show_comment"><a href="#show_comment">Comments</a></dd>
-	  <dd data-magellan-arrival="new_comment"><a href="#new_comment">New Comment</a></dd>
-	</dl>
+
+	<div id="show_magellan">  
+	  <div data-magellan-expedition="fixed">
+			<dl class="sub-nav">
+			  <dd data-magellan-arrival="show_comment"><a href="#show_article"><%= @article.title %></a></dd>
+			  <dd>|</dd>
+			  <dd data-magellan-arrival="new_comment"><a href="#show_comment">Comments</a></dd> 
+			  <dd>|</dd>
+			  <dd data-magellan-arrival="new_comment"><a href="#new_comment">New Comment</a></dd>
+			</dl>
+		</div>
+	</div>
 
 
 
@@ -60,6 +68,6 @@
 		
 
 
-	<%= link_to 'Show All', articles_path, class: "button small [radius round]" %> 
+	<!-- <%= link_to 'Show All', articles_path, class: "button small [radius round]" %>  -->
 
 </div>	<!-- end show -->

@@ -111,6 +111,10 @@
   background:rgba(0,0,0,0.5)
 }
 
+#articles #articles{
+  padding-top: 4em;
+}
+
 
 #articles {
     display: table;
@@ -218,6 +222,13 @@ blockquote p {
   text-align: right; 
 }
 
+dl {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+dl dd {
+   margin-bottom: 0.75rem; }
 
 
 .post_image {
@@ -231,7 +242,6 @@ blockquote p {
 }
 
 #edit{
-  
   border-right-style:solid;
   border-bottom-style: solid;
   border-color: #D5E8FF;
@@ -388,9 +398,67 @@ blockquote p {
 }*/
 
 #show_comment{
-  padding-top: 5em;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
+.sub-nav {
+  display: block;
+  width: auto;
+  overflow: hidden;
+  margin: -0.25rem 0 1.125rem;
+  margin-right: 0;
+  margin-left: -0.75rem; 
+}
+  
+
+  .sub-nav dt {
+    text-transform: uppercase; }
+  .sub-nav dt,
+  .sub-nav dd,
+  .sub-nav li {
+    float: left;
+    display: inline;
+    margin-left: 1rem;
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.875rem;
+
+    color: #D5E8FF; 
+    }
+    .sub-nav dt a,
+    .sub-nav dd a,
+    .sub-nav li a {
+      text-decoration: none;
+      color: #D5E8FF;
+      padding: 0.1875rem 1rem; }
+      .sub-nav dt a:hover,
+      .sub-nav dd a:hover,
+      .sub-nav li a:hover {
+        color: white; }
+    .sub-nav dt.active a,
+    .sub-nav dd.active a,
+    .sub-nav li.active a {
+      border-radius: 3px;
+      font-weight: normal;
+      background: #008cba;
+      padding: 0.1875rem 1rem;
+      cursor: default;
+      color: white; }
+      .sub-nav dt.active a:hover,
+      .sub-nav dd.active a:hover,
+      .sub-nav li.active a:hover {
+        background: #0078a0; }
+
+
+ 
+
+
+#show_magellan dl{
+  background-color: black;
+}
 
 textarea {
   height: 10em;
