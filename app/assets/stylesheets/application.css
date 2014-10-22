@@ -19,24 +19,11 @@
 
 
 
-.body{
-
-}
 
 
-#footer {position: relative;
-  margin-top: -150px; /* negative value of footer height */
-  height: 150px;
-  clear:both;
-}
 
-#footer .button{
-  width: 100%;  
-  background-size: 100%;
-  text-align: center;
-  color: #D5E8FF;
-  
-}
+
+
 
 .article {
   font-size: 1em;
@@ -61,7 +48,7 @@
 #about{
     width: 100%;
     height: auto;
-    padding: 100px 0;
+    padding: 2.5em 0;
     background-image: url('bluebg3.jpg'); no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
@@ -77,7 +64,7 @@
   border-radius: 1em;
     width: 100%;
     height: auto;
-    padding: 100px 0;
+    padding: 5em 0;
     text-align: center;
     color: #D5E8FF;
     background-color: white;  
@@ -95,8 +82,15 @@
 #about #border{
   border-style: solid;
   border-color: white;
-  width: 100%;
-  height: 100%;
+  border-radius: 2em;
+  border-top-style: none;
+  border-bottom-style: none;
+}
+
+#about #about h2{
+  font-weight: bold;
+  padding-bottom: 2em;
+
 }
 
 
@@ -121,7 +115,7 @@
     width: 100%;
     height: auto;
     color: #fff;
-    background-image: url('background.jpg'); no-repeat bottom center scroll;
+    /*background-image: url('background.jpg'); no-repeat bottom center scroll;*/
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -145,6 +139,8 @@ a:active {
   color: #D5E8FF;
   text-decoration: none;
 }
+
+
 
  div.centeredcontent {
   width: 50%;
@@ -171,10 +167,6 @@ div.form_container {
 
 div.row {
   margin-left: 0;
-}
-
-input[type="text"] {
-  float: left;
 }
 
 
@@ -231,15 +223,35 @@ dl dd {
    margin-bottom: 0.75rem; }
 
 
+#footer {position: relative;
+  margin-top: -150px; /* negative value of footer height */
+  height: 150px;
+  clear:both;
+}
+
+#footer .button{
+  width: 100%;  
+  background-size: 100%;
+  text-align: center;
+  color: #D5E8FF;
+  
+}
+
+input[type="text"] {
+  float: left;
+}
+
+#left{
+  text-align: left;
+}
+
 .post_image {
   float: right;
   margin: 10px;
 }
 
 
-#right {
-  text-align: right;
-}
+
 
 #edit{
   border-right-style:solid;
@@ -463,9 +475,6 @@ dl dd {
         background: #0078a0; }
 
 
- 
-
-
 #show_magellan dl{
   background-color: black;
 }
@@ -473,6 +482,10 @@ dl dd {
 textarea {
   height: 10em;
   color: black;
+}
+
+#right {
+  text-align: right;
 }
 
 @media screen and (max-width: 980px) {
