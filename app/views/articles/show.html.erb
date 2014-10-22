@@ -1,41 +1,65 @@
 
+<div id="show" data-magellan-expedition="fixed">
+
+	<!-- <div class="sticky">
+    <nav class="top-bar" data-topbar>
+      <section class="top-bar-section">
+        <ul class="left">
+        	<li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+        	<li class="has-dropdown">
+            <a href="#show_article"><%= @article.title %></a>
+            <ul class="dropdown">
+              <li><a href="#show_comment">Comment</a></li>
+              <li><a href="#"></a></li>
+            </ul>
+          </li>
+        </ul> 
+      </section>
+    </nav>
+  </div>	 -->
+
+
 
 <!-- articles-->
 
-<div class="article">
-	<div class="row centered">
-		<div class="small-10 small-offset-1 panel columns">
-						
-						<div class="panel">
-						  <h1><u><%= @article.title %></u></h1>
-						  <p>&nbsp &nbsp &nbsp &nbsp<%= @article.text %></p>
-						</div>  
-
-          <p id="right">	<%= link_to 'Edit', edit_article_path(@article), class: "button small [radius round]"%> </p>
+	<div id="show_article">
+		<div class="row centered">
+			<div class="small-10 small-offset-1 panel columns">					
+				<div class="panel">
+				  <h1><u><%= @article.title %></u></h1>
+				  <p>&nbsp &nbsp &nbsp &nbsp<%= @article.text %></p>
+				</div>  
+	      <p id="right">	<%= link_to 'Edit', edit_article_path(@article), class: "button small [radius round]"%> </p>
+			</div>
 		</div>
 	</div>
-</div>
 
+	<dl class="sub-nav">
+	  <dd data-magellan-arrival="show_comment"><a href="#show_comment">Comments</a></dd>
+	  <dd data-magellan-arrival="new_comment"><a href="#new_comment">New Comment</a></dd>
+	</dl>
 
 
 
 <!-- comments -->
+	<a name="show_comment"></a>
+	<div id="show_comment">
+		<h3> &nbsp <u>Comments</u></h3>
+			<%= render @article.comments %>
+	</div>
 
-
-<h3> &nbsp <u>Comments</u></h3>
-	<%= render @article.comments %>
-
-
-<div class="new_comment">
-	<div class="row">
-		<div class="small-6 small-offset-.3 columns">
-
-			<h3>Add a comment:</h3>
-			<%= render "comments/form" %>
+  <a name="new_comment"></a>
+	<div id="new_comment">
+		<div class="row">
+			<div class="small-6 small-offset-.3 columns">
+				<h3>Add a comment:</h3>
+				<%= render "comments/form" %>
+			</div>
 		</div>
 	</div>
-</div>	
+		
 
 
+	<%= link_to 'Show All', articles_path, class: "button small [radius round]" %> 
 
-<%= link_to 'Show All', articles_path, class: "button small [radius round]" %> 
+</div>	<!-- end show -->

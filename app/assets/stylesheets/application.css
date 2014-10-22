@@ -74,14 +74,17 @@
 
 #about #about{
   border-style: solid;
-  border-color: white;
+  border-radius: 1em;
     width: 100%;
     height: auto;
     padding: 100px 0;
     text-align: center;
-    color: black;
-    background: no-repeat bottom center scroll;
-    background-color: #007095;
+    color: #D5E8FF;
+    background-color: white;  
+    background: transparent\9;  
+    background:rgba(0,0,0,0.9);
+   /* background: no-repeat bottom center scroll;
+    background-color: #007095;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -369,6 +372,24 @@ blockquote p {
 .no-js .tabs-content > .content {
   display: block;
   float: none; }
+
+
+/*#show{
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+    background-image: url('http://www.webdesignhot.com/wp-content/uploads/2013/10/Abstract-Blue-Color-Design-Vector-Background-Graphic.jpg'); no-repeat bottom center scroll;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+
+}*/
+
+#show_comment{
+  padding-top: 5em;
+}
 
 
 textarea {

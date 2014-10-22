@@ -7,28 +7,17 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
-
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-
   <%= csrf_meta_tags %>
   <%= yield(:head) %>
-
-
-
 </head>
 
 <body>
- 
 <!-- top nav -->
   <div class="sticky">
     <nav class="top-bar" data-topbar>
-       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-
       <ul class="title-area">
-        <li class="name">
-          <h1>Cumulative Intelligence</h1>
-        </li>
-
+        <li class="name"><h1>Cumulative Intelligence</h1></li>
         <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
       </ul>
 
@@ -36,9 +25,8 @@
         <ul class="left">
     
         </ul> 
-       
         <ul class="right">
-          <% if @aricle !=nil %> 
+    <% if @aricle !=nil %> 
             <li class="has-dropdown">
             <a href="#">Right Button Dropdown</a>
             <ul class="dropdown">
@@ -46,7 +34,7 @@
               <li class="active"><a href="#">Active link in dropdown</a></li>
             </ul>
           </li>
-    <% else %>      
+      <% else %>      
             <li class="has-dropdown">
               <a href="/#about">About</a>
               <ul class="dropdown">
@@ -55,29 +43,26 @@
               </ul>
             </li>
     <% end %>
-
-          <% if current_user != nil %>
+    <% if current_user != nil %>
             <li><%= link_to "Welcome " + current_user.username.capitalize, controller: "users", action: "show" %></li>
             <li><%= link_to "Log out", controller: "users", action: "logout" %></li>
-          <% else %>
+      <% else %>
             <li><%= link_to 'Sign In', controller: "users", action: "login" %></li>
             <li><%= link_to "Register", controller: "users", action: "new" %></li>
-          <% end %>
-        </ul>
+    <% end %>
+        </ul> <!-- end right -->
       </section>
     </nav>
   </div>
 
-<div class="body">
-   
+  <div class="body">
 
     <%= yield %>
 
-  
-</div>
+  </div>
 
 
-<footer class="row">
+  <footer class="row">
     <div class="large-12 columns">
       <hr/>
       <div class="row">
@@ -89,20 +74,13 @@
   </footer>
 
 
-
-
-  
-  
-
   <script src="/assets/foundation.js"></script>
   <script src="/assets/foundation.topbar.js"></script>
+  <script src="/assets/foundation.magellan.js"></script>
   <script src="/assets/foundation.tabs.js"></script>
   <script src="/assets/scripts.js"></script>
   <script src="/assets/slick.min.js"></script>
-
   <script>$(document).foundation();</script>
- 
-
  
 </body>
 </html>
