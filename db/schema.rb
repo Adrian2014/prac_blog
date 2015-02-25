@@ -16,9 +16,12 @@ ActiveRecord::Schema.define(version: 20141016173650) do
   create_table "articles", force: true do |t|
     t.string   "title"
     t.text     "text"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "articles", ["user_id"], name: "index_articles_on_user_id"
 
   create_table "comments", force: true do |t|
     t.string   "commenter"

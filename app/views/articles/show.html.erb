@@ -9,7 +9,9 @@
 				  <h1><u><%= @article.title %></u></h1>
 				  <p>&nbsp &nbsp &nbsp &nbsp<%= @article.text %></p>
 				</div>  
-	      <p id="right">	<%= link_to 'Edit', edit_article_path(@article), class: "button small [radius round]"%> </p>
+	    <% if @article.user_id == current_user  %>
+	    <p id="right"><%= link_to 'Edit', edit_article_path(@article), class: "button small [radius round]"%> </p>
+	    <% end %>
 			</div>
 		</div>
 	</div>
@@ -27,13 +29,14 @@
 	</div>
 
 <!-- comments -->
-	
+<% if @article.comments.length > 0 %>	
 	<div id="show_comment" class="row centered">
 		<a name="show_comment"></a>
 		<div class="small-10 small-offset-1 panel columns">
 			<%= render @article.comments %>
-			</div>
+		</div>
 	</div>
+<% end %>
 
   <a name="new_comment"></a>
 	<div id="new_comment">

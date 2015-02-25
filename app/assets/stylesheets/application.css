@@ -14,17 +14,6 @@
  *= require_self
  */
 
-
-
-
-
-
-
-
-
-
-
-
 .article {
   font-size: 1em;
   line-height: 100%;
@@ -208,6 +197,9 @@ blockquote p {
   margin-top: .5em;
 }
 
+#contact{
+ background-color: black;
+}
 
 .comment div p {
   border-top: 1px solid #dddddd;
@@ -223,15 +215,17 @@ dl dd {
    margin-bottom: 0.75rem; }
 
 
-#footer {position: relative;
-  margin-top: -150px; /* negative value of footer height */
+footer {
+  position: relative;
   height: 150px;
   clear:both;
+  color: #D5E8FF;
+  background-color: black;
 }
 
 #footer .button{
   width: 100%;  
-  background-size: 100%;
+  F: 100%;
   text-align: center;
   color: #D5E8FF;
   

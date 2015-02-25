@@ -1,16 +1,16 @@
 <section class="container">
-  <h1>Welcome to your Posts Page</h1>
+  <h1>Welcome to your Articles Page</h1>
 
   <ol>
-    <% @posts.each do |post| %>
+    <% @articles.each do |article| %>
 
       <li>
-        <%= link_to post.post_title, post %>
-        <%= post.post_date %>
+        <%= link_to article.title, article %>
+        <%= article.created_at %>
 
-        <%= link_to 'Edit', edit_post_path(post), class: "button tiny [radius round]" %>
+        <%= link_to 'Edit', edit_article_path(article), class: "button tiny [radius round]" %>
 
-        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "button tiny [radius round]" %>
+        <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }, class: "button tiny [radius round]" %>
 
       </li>
 
@@ -19,7 +19,7 @@
 
   <div class="row">
     <div class="small-4 columns">
-      <%= link_to 'New Post', new_post_path, class: "button tiny [radius round]" %>
+      <%= link_to 'New Article', new_article_path, class: "button tiny [radius round]" %>
     </div>
   </div>
 </section>

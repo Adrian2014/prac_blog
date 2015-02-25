@@ -17,7 +17,7 @@
   <div class="sticky">
     <nav class="top-bar" data-topbar>
       <ul class="title-area">
-        <li class="name"><h1>Cumulative Intelligence</h1></li>
+        <li class="name"><a href="/"><h1>Cumulative Intelligence</h1></a></li>
         <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
       </ul>
 
@@ -26,15 +26,7 @@
     
         </ul> 
         <ul class="right">
-    <% if @aricle !=nil %> 
-            <li class="has-dropdown">
-            <a href="#">Right Button Dropdown</a>
-            <ul class="dropdown">
-              <li><a href="#">First link in dropdown</a></li>
-              <li class="active"><a href="#">Active link in dropdown</a></li>
-            </ul>
-          </li>
-      <% else %>      
+         
             <li class="has-dropdown">
               <a href="/#about">About</a>
               <ul class="dropdown">
@@ -42,7 +34,7 @@
                 <li><a href="/#contact">Contact</a></li>
               </ul>
             </li>
-    <% end %>
+    
     <% if current_user != nil %>
             <li><%= link_to "Welcome " + current_user.username.capitalize, controller: "users", action: "show" %></li>
             <li><%= link_to "Log out", controller: "users", action: "logout" %></li>
@@ -62,12 +54,15 @@
   </div>
 
 
-  <footer class="row">
+  <footer class="row" id="contact">
     <div class="large-12 columns">
       <hr/>
       <div class="row">
-        <div class="large-6 columns">
+        <div class="small-5 small-offset-1 columns">
           <p>© Cumulative Intelligence</p>
+        </div>
+        <div class="small-5 columns" >
+            <p><a "mailto:cumulative.intelligence@gmail.com">cumulative.intelligence@gmail.com</a></p>
         </div>
       </div>
     </div> 

@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @article = Article.where(user_id: session[:id])
+    @articles = Article.where(user_id: session[:id])
   end
 
   def login
